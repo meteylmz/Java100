@@ -1,6 +1,6 @@
 package main.yaratik;
 
-public class ejderha extends yaratik implements yaratikFonksiyon{
+public class ejderha extends yaratik{
 	
 	private int ucmaHizi = 100;
 	

@@ -1,6 +1,6 @@
 package main.yaratik;
 
-public class zombi extends yaratik implements yaratikFonksiyon{
+public class zombi extends yaratik{
 	
 	private int yurumeHizi = 50;
 	

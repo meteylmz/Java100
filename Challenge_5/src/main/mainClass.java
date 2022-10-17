@@ -14,6 +14,7 @@ public class mainClass {
 		zombi zombi = new zombi("zombi1", 10, 10);
 		zombi zombi2 = new zombi("zombi2", 20, 20);
 		
+		
 	}
 
 }
