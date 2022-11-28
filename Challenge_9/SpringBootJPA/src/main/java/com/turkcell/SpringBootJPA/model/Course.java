@@ -1,20 +1,19 @@
 package com.turkcell.SpringBootJPA.model;
 
-import java.io.Serializable;
-
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.ForeignKey;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
 
 @Data
 @NoArgsConstructor
@@ -30,10 +29,12 @@ public class Course{
 	private String courseName;
 	
 	@ManyToOne
+	@JoinColumn(name = "subject-id", foreignKey = @ForeignKey(name = "subjectfk"))
 	@OnDelete(action = OnDeleteAction.CASCADE)
 	private Subject subject;
 	
 	@ManyToOne
+	@JoinColumn(name = "teacher-id", foreignKey = @ForeignKey(name = "teacherfk"))
 	@OnDelete(action = OnDeleteAction.CASCADE)
 	private Teacher teacher;
 	
